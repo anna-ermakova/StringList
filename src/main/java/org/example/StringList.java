@@ -22,4 +22,10 @@ public interface StringList {
     boolean equals(StringList other);
 
     int size();
+
+    boolean isEmpty();
+
+    void clear();
+
+    String[] toArray();
 }

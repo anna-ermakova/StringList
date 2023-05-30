@@ -1,4 +1,10 @@
 package org.example;
 
-public class ElementNotFoundException extends Throwable {
+public class ElementNotFoundException extends RuntimeException {
+    public ElementNotFoundException() {
+        super();
+    }
+    public ElementNotFoundException(String massage) {
+        super(massage);
+    }
 }

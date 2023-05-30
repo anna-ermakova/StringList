@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class StringArrayList implements StringList {
     private String[] data;
     private int currentSize;
@@ -68,32 +71,83 @@ public class StringArrayList implements StringList {
 
     @Override
     public boolean contains(String item) {
-        return false;
+        return indexOf(item) != -1;
     }
 
     @Override
     public int indexOf(String item) {
-        return 0;
+        for (int i = 0; i < currentSize; i++) {
+            if (data[i].equals(item)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public int lastIndexOf(String item) {
-        return 0;
+        for (int i = currentSize - 1; i >= 0; i--) {
+            if (data[i].equals(item)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public String get(int index) {
-        return null;
+        checkBounds(index);
+        return data[index];
     }
 
     @Override
     public boolean equals(StringList other) {
-        return false;
+        if (other == null) {
+            throw new IllegalArgumentException();
+        }
+        if (currentSize != other.size()) {
+            return false;
+        }
+        for (int i = 0; i < currentSize; i++) {
+            if (!Objects.equals(data[i], other.get(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
     public int size() {
-        return 0;
+        return currentSize;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return currentSize == 0;
+    }
+
+    @Override
+    public void clear() {
+        Arrays.fill(data, 0, currentSize, null);
+        currentSize = 0;
+    }
+
+    @Override
+    public String[] toArray() {
+        return Arrays.copyOf(data, currentSize);
+    }
+
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        result.append("[");
+        for (int i = 0; i < currentSize; i++) {
+            if (i > 0) {
+                result.append(", ");
+            }
+            result.append(data[i]);
+        }
+        result.append("]");
+        return result.toString();
     }
 
     private void checkBounds(int index) {
