@@ -103,7 +103,7 @@ public class StringArrayList implements StringList {
     @Override
     public boolean equals(StringList other) {
         if (other == null) {
-            throw new IllegalArgumentException();
+            throw new InvalidArgumentExсeption();
         }
         if (currentSize != other.size()) {
             return false;
@@ -152,7 +152,7 @@ public class StringArrayList implements StringList {
 
     private void checkBounds(int index) {
         if (index < 0 || index >= currentSize) {
-            throw new StringIndexOutOfBoundsException();
+            throw new StringListIndexOutOfBoundsException();
         }
     }
 

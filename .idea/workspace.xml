@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="88b8f5db-b704-4035-8d1d-c1a18907af2a" name="Changes" comment="в процессе">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/InvalidArgumentExсeption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/StringArrayListTest.java" afterDir="false" />
+    <list default="true" id="88b8f5db-b704-4035-8d1d-c1a18907af2a" name="Changes" comment="интерфейс реализован. далее тесты">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ElementNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ElementNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InvalidArgumentExseption.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StringArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StringArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StringList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StringList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StringListIndexOutOfBoundsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StringListIndexOutOfBoundsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StringArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StringArrayListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,12 +59,51 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="StringArrayListTest.simpleAdditionPositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.StringArrayListTest">
+    <configuration name="StringArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StringList" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StringArrayListTest" />
-      <option name="METHOD_NAME" value="simpleAdditionPositiveTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringArrayListTest.equalsNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringArrayListTest" />
+      <option name="METHOD_NAME" value="equalsNegativeTest(org.example.StringArrayList)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringArrayListTest.isEmptyNegativeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringArrayListTest" />
+      <option name="METHOD_NAME" value="isEmptyNegativeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringArrayListTest.isEmptyPositiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringArrayListTest" />
+      <option name="METHOD_NAME" value="isEmptyPositiveTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringArrayListTest.toArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringArrayListTest" />
+      <option name="METHOD_NAME" value="toArrayTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,7 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StringArrayListTest.simpleAdditionPositiveTest" />
+        <item itemvalue="JUnit.StringArrayListTest" />
+        <item itemvalue="JUnit.StringArrayListTest.toArrayTest" />
+        <item itemvalue="JUnit.StringArrayListTest.isEmptyNegativeTest" />
+        <item itemvalue="JUnit.StringArrayListTest.isEmptyPositiveTest" />
+        <item itemvalue="JUnit.StringArrayListTest.equalsNegativeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -92,7 +128,7 @@
       <option name="presentableId" value="Default" />
       <updated>1685113145367</updated>
       <workItem from="1685113146793" duration="5009000" />
-      <workItem from="1685452367225" duration="7092000" />
+      <workItem from="1685452367225" duration="15762000" />
     </task>
     <task id="LOCAL-00001" summary="в процессе">
       <created>1685120978880</created>
@@ -101,14 +137,43 @@
       <option name="project" value="LOCAL" />
       <updated>1685120978880</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="интерфейс реализован. далее тесты">
+      <created>1685463759879</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685463759879</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="в процессе" />
-    <option name="LAST_COMMIT_MESSAGE" value="в процессе" />
+    <MESSAGE value="интерфейс реализован. далее тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="интерфейс реализован. далее тесты" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StringIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
